@@ -1,0 +1,12 @@
+/* gallery.css */
+
+.gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+}
+
+.gallery img {
+    scroll-snap-align: center;
+    max-width: 100%;
+}
