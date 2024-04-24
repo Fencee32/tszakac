@@ -7,31 +7,32 @@
     <meta name="description" content="Entdecken Sie unsere hochwertigen Akazienholz Oszlop für Gartenbau und Sichtschutz. Wir bieten Naturholzpfähle in verschiedenen Größen und Qualitäten.">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="gallery.css">
+    <script src="script.js" defer></script>
+    <script src="gallery.js" defer></script>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Akazienholz Oszlop</h1>
+            <h1>Akazienholz</h1>
             <nav>
                 <ul>
                     <li><a href="#about">Über uns</a></li>
                     <li><a href="#acacia">Akazienholz</a></li>
                     <li><a href="#contact">Kontakt</a></li>
-                    <li><a href="#pricing">Preisliste</a></li>
+                    <li><a href="#bildergalerie">Bildergalerie</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="hero">
+    <section id="hero" data-nav="hero">
         <div class="container">
-            <h2>Willkommen bei Akazienholz Oszlop!</h2>
-            <p>Wir bieten hochwertige Akazienholz Oszlop für verschiedene Anwendungen an.</p>
-            <a href="#products" class="btn">Unsere Produkte</a>
+            <div id="akackep"><img src="img1.jpg" alt="akacfa" srcset=""></div>
+            <a href="#pricing" class="btn">Preisliste</a>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" data-nav="about">
         <div class="container">
             <h2>Über uns</h2>
             <p>
@@ -40,14 +41,33 @@
         </div>
     </section>
 
-    <section id="acacia">
+    <section id="acacia" data-nav="acacia">
         <div class="container">
             <h2>Akazienholz</h2>
             <p>Der Akazienbaum wird wegen seine einzigartige Eigenschaften für umfängliche Zwecke empfohlen. Er ist fest und dauerhaft, deshalb lässt er sich ideal für Landwirtschaft als Erstellung Spalten und Pfählen bzw. als Holz verwenden. Wegen seiner Merkmale ist der Akazienbaum außerorts ausgezeichnet, langfristig verwendbar. Er kann die Schwierigkeiten des Wetters durch seine Säuregehalt widerstehen, deshalb ist Oberflächenbehandlung oder Imprägnation unnötig. Außerdem kann er einfach und dauerhaft behandelt werden, so kann der Akazienbaum sein ästhetisches Aussehen für Jahrzehnten behalten. Die Kombination der hohen Qualität und Langfristigkeit sorgt dafür, dass der Akazienbaum eine ideale Wahl für jeden ist, der eine lange und zuverlässige Lösung sucht.</p>
         </div>
     </section>
 
-    <section id="pricing">
+    <section id="contact" data-nav="contact">
+        <div class="container">
+            <h2>Kontakte:</h2>           
+            <p>
+                Firmenname: Szabolcs Takács e.K.<br>
+                Telefonnummer: +36 (70) 518 3668<br>
+                Email-Adresse: xy<br>
+                Steuernummer: 60393324-2-30<br>
+                UID-Nummer: HU 60393324<br>
+                Briefadresse: 3390 Füzesabony, Honvéd Str. 4<br>
+                Niederlassung: Füzesabony Pusztaszikszó, Parz. 0339/12<br>
+                Haupttätigkeit: 4673 Holz-, Baumaterial- und Sanitätsproduktgroßhandel<br>
+                Ladeort: 3390 Füzesabony Pusztaszikszó<br>
+                EUTR Nr: AA6464145
+            </p>
+        </div>
+    </section>
+
+
+    <section id="pricing" data-nav="pricing">
         <div class="container">
             <h2>Preisliste</h2>
             <div class="table-responsive">
@@ -280,34 +300,29 @@
         </div>
     </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Kontakte:</h2>           
-            <p>
-                Firmenname: Szabolcs Takács e.K.<br>
-                Telefonnummer: +36 (70) 518 3668<br>
-                Email-Adresse: xy<br>
-                Steuernummer: 60393324-2-30<br>
-                UID-Nummer: HU 60393324<br>
-                Briefadresse: 3390 Füzesabony, Honvéd Str. 4<br>
-                Niederlassung: Füzesabony Pusztaszikszó, Parz. 0339/12<br>
-                Haupttätigkeit: 4673 Holz-, Baumaterial- und Sanitätsproduktgroßhandel<br>
-                Ladeort: 3390 Füzesabony Pusztaszikszó<br>
-                EUTR Nr: AA6464145
-            </p>
-        </div>
-    </section>
 
-    <section id="gallery">
+    <section id="bildergalerie" data-nav="bildergalerie">
         <div class="container">
-            <h2>Képgaléria</h2>
-            <!-- Képgaléria elhelyezése -->
+            <h2>Bildergalerie</h2>
+            <div class="gallery">
+                <img src="akacoszlop2.jpg" alt="Akazienholz" class="gallery-img">
+                <img src="akacoszlop3.jpg" alt="Akazienholz" class="gallery-img">
+                <img src="akacoszlop4.jpg" alt="Akazienholz" class="gallery-img">
+                <img src="akacoszlop.png" alt="Akazienholz" class="gallery-img">
+            </div>
+            <div id="myModal" class="modal">
+                <span class="close">&times;</span>
+                <img class="modal-content" id="img01">
+                <span class="prev" onclick="plusSlides(-1)">&#10094;</span>
+                <span class="next" onclick="plusSlides(1)">&#10095;</span>
+            </div>
         </div>
     </section>
+    
 
     <footer>
         <div class="container">
-          <p>Takács Szabolcs e.K</e></p>
+          <p>2022 ©-Takács Szabolcs e.K</e></p>
         </div>
     </footer>
 </body>

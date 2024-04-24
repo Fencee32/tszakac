@@ -1,33 +1,37 @@
 /* style.css */
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
-    background-color: #f9f9f9; /* Háttérszín */
+    background-color: #e8e8e8;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px; /* Kis padding minden oldalán a tartalom körül */
+    padding: 20px;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.8); /* Átlátszó fekete háttér */
-    color: #fff;
-    padding: 20px 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #f1f1f1;
     text-align: center;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
     transition: background-color 0.5s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
 }
 
-header.scrolled {
-    background-color: rgba(0, 0, 0, 1); /* Fekete háttér */
+header h1 {
+    margin: 0;
+    font-size: 26px;
 }
 
 nav ul {
@@ -42,122 +46,81 @@ nav ul li {
 }
 
 nav ul li a {
-    color: #fff;
+    color: #f1f1f1;
     text-decoration: none;
+    font-size: 20px;
 }
 
 section {
-    padding: 100px 0;
-}
-
-#hero {
-    background-color: #f4f4f4;
-    text-align: center;
-    padding: 80px 0;
-}
-
-#hero h2 {
-    margin-bottom: 20px;
-    font-size: 36px;
-}
-
-.product {
-    margin-bottom: 40px;
-}
-
-.product img {
-    max-width: 100%;
-}
-
-.price {
-    display: block;
-    margin-top: 10px;
-}
-
-.btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border: none;
-    border-radius: 5px;
-}
-
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-footer ul {
-    list-style-type: none;
-}
-
-footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-
-footer ul li a {
-    color: #fff;
-    text-decoration: none;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 40px; /* Távolság a táblázatok alatt */
-}
-
-table th,
-table td {
-    border: 1px solid #ddd;
-    padding: 8px;
-    text-align: center;
-}
-
-table th {
-    background-color: #f2f2f2;
+    padding: 60px 0;
 }
 
 h2, h3 {
-    color: #333; /* Sötétebb fejléc színek */
-    margin-bottom: 20px;
+    color: #333;
+    margin-bottom: 25px;
 }
 
 p {
-    color: #666; /* Szöveg szín */
-    margin-bottom: 20px;
-}
-
-.gallery {
-    display: flex;
-    flex-wrap: wrap; /* Képek több sorba rendezése kisebb képernyőkön */
-    justify-content: center; /* Képek középre igazítása */
+    color: #666;
+    margin-bottom: 25px;
+    font-size: 18px;
 }
 
 .gallery img {
     max-width: 100%;
     border-radius: 5px;
-    margin: 10px; /* Távolság a képek között */
+    margin: 15px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 768px) {
     .container {
-        padding: 0 10px;
+        padding: 0 15px;
     }
 
     header {
-        padding: 15px 0; /* Kis padding a header-ben a kisebb képernyőkön */
+        padding: 15px 0;
     }
 
     nav ul li {
-        margin-right: 10px; /* Kisebb távolság a menüelemek között */
+        margin-right: 15px;
     }
 
     .gallery img {
-        width: 45%; /* Képek szélessége kisebb képernyőn */
+        width: 50%;
     }
+}
+
+#akackep {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -200px;
+    margin-bottom: 15px;
+}
+
+nav ul li a.active {
+    color: rgb(187, 180, 187);
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 50px;
+}
+
+table th,
+table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+table th {
+    background-color: #d0d0d0;
+}
+
+table tfoot {
+    margin-top: 25px;
 }
