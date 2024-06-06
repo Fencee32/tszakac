@@ -19,55 +19,41 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-// gallery.js
+/// Get the modal
+var modal = document.getElementById("myModal");
 
-document.addEventListener('DOMContentLoaded', function() {
-    const modal = document.getElementById('myModal');
-    const modalImg = document.getElementById('img01');
-    const close = document.querySelector('.close');
-    const images = document.querySelectorAll('.gallery-img');
-    let currentIndex;
+// Get the images and bind the onclick event to each image
+var images = document.getElementsByClassName("gallery-img");
+var modalImg = document.getElementById("img01");
 
-    images.forEach((img, index) => {
-        img.addEventListener('click', function() {
-            modal.style.display = 'block';
-            modalImg.src = this.src;
-            currentIndex = index;
-        });
-    });
+for (var i = 0; i < images.length; i++) {
+    images[i].onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        currentIndex = Array.prototype.indexOf.call(images, this);
+    }
+}
 
-    close.addEventListener('click', function() {
-        modal.style.display = 'none';
-    });
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
 
-    function showSlide(index) {
-        if (index >= images.length) {
-            currentIndex = 0;
-        } else if (index < 0) {
-            currentIndex = images.length - 1;
-        } else {
-            currentIndex = index;
-        }
+// When the user clicks on <span> (x), close the modal
+span.onclick = function () {
+    modal.style.display = "none";
+}
+
+// Add navigation for modal images
+var currentIndex;
+document.querySelector(".prev").onclick = function () {
+    if (currentIndex > 0) {
+        currentIndex--;
         modalImg.src = images[currentIndex].src;
     }
+}
 
-    document.querySelector('.prev').addEventListener('click', function() {
-        showSlide(currentIndex - 1);
-    });
-
-    document.querySelector('.next').addEventListener('click', function() {
-        showSlide(currentIndex + 1);
-    });
-
-    document.addEventListener('keydown', function(event) {
-        if (modal.style.display === 'block') {
-            if (event.key === 'ArrowLeft') {
-                showSlide(currentIndex - 1);
-            } else if (event.key === 'ArrowRight') {
-                showSlide(currentIndex + 1);
-            } else if (event.key === 'Escape') {
-                modal.style.display = 'none';
-            }
-        }
-    });
-});
+document.querySelector(".next").onclick = function () {
+    if (currentIndex < images.length - 1) {
+        currentIndex++;
+        modalImg.src = images[currentIndex].src;
+    }
+}

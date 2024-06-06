@@ -272,3 +272,37 @@ footer p {
         font-weight: bold;
     }
 }
+/* Leírásokat tartalmazó szekciók stílusainak módosítása */
+section {
+    padding: 20px 10px;
+    margin-top: 60px; /* Megfelelő hely a fixált fejléc miatt */
+    text-align: center; /* Szöveg középre igazítása */
+}
+
+section h2 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center; /* Címsor középre igazítása */
+}
+
+section p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 15px;
+    text-align: center; /* Bekezdés középre igazítása */
+    max-width: 800px; /* Szöveg maximális szélességének beállítása, hogy ne legyen túl széles */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Mobil nézethez igazítás */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 18px;
+    }
+
+    section p {
+        font-size: 14px;
+    }
+}
