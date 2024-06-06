@@ -306,3 +306,57 @@ section p {
         font-size: 14px;
     }
 }
+/* Asztali nézet (alapértelmezett) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #ddd; /* Táblázat alapértelmezett kerete */
+}
+
+table th, table td {
+    border: 1px solid #ddd; /* Cellák alapértelmezett kerete */
+    padding: 12px;
+    text-align: left;
+}
+
+table thead {
+    background-color: #f2f2f2;
+}
+
+/* Mobil nézethez igazítás */
+@media (max-width: 768px) {
+    table {
+        border: 2px solid #444; /* Táblázat kerete mobil nézetben */
+    }
+
+    table th, table td {
+        border: 1px solid #444; /* Cellák kerete mobil nézetben */
+        padding: 10px;
+    }
+
+    table thead {
+        display: none; /* Fejléc elrejtése mobil nézetben */
+    }
+
+    table tbody tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #444; /* Sorok kerete mobil nézetben */
+    }
+
+    table tbody tr td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table tbody tr td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        text-align: left;
+        font-weight: bold;
+    }
+}
