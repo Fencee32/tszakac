@@ -1,5 +1,4 @@
-/* gallery.css */
-
+/* Gallery Styles */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -16,17 +15,22 @@
 
 @media (min-width: 768px) {
     .gallery-img {
-        width: calc(33.33% - 10px); /* Adjust for smaller screens */
+        width: calc(33.33% - 10px);
+    }
+}
+
+@media (min-width: 1024px) {
+    .gallery-img {
+        width: calc(25% - 10px);
     }
 }
 
 /* Modal Styles */
-
 .modal {
     display: none;
     position: fixed;
     z-index: 1000;
-    padding-top: 50px; /* Adjust as needed */
+    padding-top: 50px;
     left: 0;
     top: 0;
     width: 100%;
@@ -38,11 +42,11 @@
 .modal-content {
     display: block;
     margin: auto;
-    width: 90%; /* Adjust as needed */
+    width: 90%;
     max-width: 800px;
     position: relative;
     animation: modal-show 0.5s ease-in-out;
-    margin-top: 50px; /* Adjust as needed */
+    margin-top: 50px;
 }
 
 .close {
@@ -81,11 +85,11 @@
 
 @media (max-width: 768px) {
     .gallery-img {
-        width: calc(50% - 10px); /* Adjust for smaller screens */
+        width: calc(50% - 10px);
     }
 
     .modal-content {
-        width: 90%; /* Adjust for smaller screens */
+        width: 90%;
     }
 
     .close {

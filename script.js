@@ -1,7 +1,7 @@
 // script.js
 
 document.addEventListener('DOMContentLoaded', function() {
-    // Sima görgetés a navigációs linkekhez
+    // Navigation link smooth scrolling
     const navLinks = document.querySelectorAll('nav ul li a');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Hős kép kattintás esemény
+    // Hero image click event
     const heroImage = document.getElementById('akackep');
     heroImage.addEventListener('click', function() {
         window.location.href = '#pricing';
@@ -41,7 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function showSlide(index) {
-        if (images.length === 0) return; // Üres tömb ellenőrzése
         if (index >= images.length) {
             currentIndex = 0;
         } else if (index < 0) {
