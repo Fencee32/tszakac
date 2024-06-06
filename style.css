@@ -207,3 +207,68 @@ footer p {
         font-size: 10px;
     }
 }
+/* Mobil nézethez: legfeljebb 768px szélesség */
+@media (max-width: 768px) {
+    header {
+        height: auto; /* Automatikus magasság */
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 18px; /* Kisebb betűméret */
+    }
+
+    nav ul {
+        flex-direction: column; /* Menü elemek egymás alatt */
+    }
+
+    nav ul li {
+        margin: 5px 0;
+    }
+
+    nav ul li a {
+        font-size: 14px; /* Kisebb betűméret */
+    }
+}
+/* Táblázat mobil nézethez: legfeljebb 768px szélesség */
+@media (max-width: 768px) {
+    .table-responsive {
+        overflow-x: auto; /* Görgethetővé teszi a táblázatot vízszintesen */
+    }
+
+    table {
+        width: 100%; /* Teljes szélesség */
+        border-collapse: collapse;
+    }
+
+    table th, table td {
+        padding: 10px; /* Szűkebb cella padding */
+        font-size: 14px; /* Kisebb betűméret */
+    }
+
+    table thead {
+        display: none; /* Fejléc elrejtése */
+    }
+
+    table tbody tr {
+        display: block;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+    }
+
+    table tbody tr td {
+        display: block;
+        text-align: right;
+        padding-left: 50%;
+        position: relative;
+    }
+
+    table tbody tr td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: 10px;
+        width: calc(50% - 20px);
+        text-align: left;
+        font-weight: bold;
+    }
+}
