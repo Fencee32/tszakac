@@ -11,6 +11,8 @@
     height: auto;
     margin: 5px;
     cursor: pointer;
+    /* Animáció a képváltáshoz */
+    transition: transform 0.5s ease;
 }
 
 .modal {
@@ -80,12 +82,6 @@
 .prev:hover,
 .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
-}
-/* gallery.css */
-
-/* Animáció a képváltáshoz */
-.gallery-img {
-    transition: transform 0.5s ease;
 }
 
 /* Ablak bejelölése, amikor ráviszi az egérmutatót */
